@@ -1,0 +1,22 @@
+---
+title : "Chuẩn bị IAM Role and User"
+date : "2025-08-12"
+weight : 1
+chapter : false
+pre : "<b> 2.2 </b>"
+---
+
+Trong bước này, chúng ta sẽ tạo một IAM role để gán quyền cho các EC2 Instance và một IAM user để quản lý các tài nguyên.
+
+Kiến trúc tổng quan sau khi hoàn thành bước này sẽ như sau:
+
+
+Để học cách tạo IAM role và user, bạn có thể tham khảo lab:
+
+- [Works with IAM User and Role](https://000002.awsstudygroup.com/en/)
+
+### Content
+
+- [Tạo VPC](2.2.1-createvpc)
+- [Tạo Subnet](2.2.2-createsubnet)
+- [Tạo Route Table](2.2.3-createroundtable)

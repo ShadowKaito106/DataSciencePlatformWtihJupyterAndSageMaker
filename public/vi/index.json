@@ -1,0 +1,127 @@
+[
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createiam/",
+	"title": "Chuẩn bị IAM Role and User",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ tạo một IAM role để gán quyền cho các EC2 Instance và một IAM user để quản lý các tài nguyên.\nKiến trúc tổng quan sau khi hoàn thành bước này sẽ như sau:\nĐể học cách tạo IAM role và user, bạn có thể tham khảo lab:\nWorks with IAM User and Role Content Tạo IAM Role Tạo IAM User Gán Policy cho IAM Role "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.2-createvpc/",
+	"title": "Chuẩn bị IAM Role and User",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ tạo một IAM role để gán quyền cho các EC2 Instance và một IAM user để quản lý các tài nguyên.\nKiến trúc tổng quan sau khi hoàn thành bước này sẽ như sau:\nĐể học cách tạo IAM role và user, bạn có thể tham khảo lab:\nWorks with IAM User and Role Content Tạo VPC Tạo Subnet Tạo Route Table "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createiam/2.1.3-attachpolicytoiamrole/",
+	"title": "Gán Policy cho IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Gán Policy cho IAM Role Vào bảng điều khiển quản lý dịch vụ IAM Nhấp vào Role. Tìm role của bạn và nhấp vào nó. Tại trang role của bạn. Trong trường Trust relationships (Mối quan hệ tin cậy), nhấp vào Edit trust policy (Chỉnh sửa chính sách tin cậy). Tại trang Edit trust policy Trong trường Access level - read or write (Cấp độ truy cập - đọc hoặc ghi), nhấp vào SetSourceIdentity. Nhấp vào Update policy (Cập nhật chính sách). "
+},
+{
+	"uri": "//localhost:1313/vi/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Data Science Platform với Jupyter và SageMaker là một giải pháp toàn diện trên nền tảng AWS, giúp xây dựng môi trường phát triển khoa học dữ liệu hiện đại, hỗ trợ từ bước chuẩn bị dữ liệu, phát triển mô hình, cộng tác nhóm, đến triển khai và giám sát mô hình máy học. Hệ thống được thiết kế để đáp ứng các yêu cầu về bảo mật, quản lý người dùng, tối ưu chi phí và mang lại trải nghiệm làm việc hiệu quả cho các nhà khoa học dữ liệu.\nVới nền tảng này, bạn sẽ nhận được những lợi ích vượt trội so với phương pháp truyền thống:\nCung cấp môi trường JupyterLab tích hợp sẵn trên AWS, dễ dàng truy cập từ trình duyệt mà không cần cài đặt cục bộ. Quản lý và chia sẻ tài nguyên dự án giữa các thành viên trong nhóm một cách an toàn. Hỗ trợ nhiều ngôn ngữ lập trình phổ biến như Python, R, Julia. Tích hợp chặt chẽ với các dịch vụ AWS như S3, SageMaker, CloudWatch, IAM. Tự động hóa quy trình huấn luyện và triển khai mô hình với SageMaker. Quản lý phiên bản dữ liệu và mô hình, giúp dễ dàng tái hiện và cải tiến kết quả. Giám sát hiệu suất mô hình và chi phí sử dụng dịch vụ. Với các ưu điểm trên, Data Science Platform với Jupyter và SageMaker sẽ giúp tiết kiệm thời gian, giảm chi phí, và nâng cao hiệu quả công việc trong lĩnh vực khoa học dữ liệu.\n"
+},
+{
+	"uri": "//localhost:1313/vi/3-sagemakerandjupyter/3.1-sagemaker/",
+	"title": "Kết nối đến SageMaker",
+	"tags": [],
+	"description": "",
+	"content": "Tạo SageMaker Unified studio domain Truy cập bảng điều khiển quản lý dịch vụ SageMaker Nhấp vào Create a Unified studio domain. Tại trang Create an Amazon SageMaker Unified Studio domain. Trong trường How do you want to set up your domain?, chọn Quick setup. Nhấp vào Choose VPC. Sau khi nhấp Choose VPC Trong trường Virtual private cloud (VPC), chọn VPC của bạn. Trong Subnets, chọn cả 3 subnet bạn đã tạo. Nhấp vào Create domain.\nTruy cập bảng điều khiển quản lý dịch vụ SageMaker AI\nNhấp vào Domains. Tại trang Domains\nNhấp vào domain SageMaker của bạn. Nếu bạn có nhiều hơn 1 domain trên trang Domains, bạn có thể xem thời gian tạo của nó để biết đâu là domain SageMaker.\nTại trang domain SageMaker của bạn Trong phần Authentication and permissions, nhấp vào Edit. Trong Permissions, tìm và chọn IAM role của bạn tại cả hai trường Default execution role và Space default execution role. Đảm bảo rằng bạn đã chọn IAM role đã tạo trước đó có SetSourceIdentity, nếu không SageMaker sẽ không thể tạo không gian cho Jupyter notebook.\nNhấp vào Submit. Tại trang domain SageMaker của bạn Trong Network , nhấp vào Edit. Trong How do you want to connect to other AWS services?, chọn Public internet access và nhấp vào Submit. "
+},
+{
+	"uri": "//localhost:1313/vi/",
+	"title": "Quản lý Phiên làm việc",
+	"tags": [],
+	"description": "",
+	"content": "Data Science Platform với Jupyter và SageMaker Tổng quan Trong lab này, bạn sẽ tìm hiểu những kiến thức cơ bản và thực hành về Data Science Platform với Jupyter và SageMaker.\nBạn sẽ thực hiện việc tạo và sử dụng SageMaker cùng Jupyter cho dự án khoa học dữ liệu.\nNội dung Giới thiệu Chuẩn bị Kết nối tới SageMaker và JupyterLab Quản lý log phiên làm việc Dọn dẹp tài nguyên "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createiam/2.1.1-createiamrole/",
+	"title": "Tạo IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Tạo IAM Lab IAM Vào bảng điều khiển quản lý dịch vụ IAM Nhấp vào Role. Nhấp vào Create Role. Tại trang Create Role. Trong trường Trusted entity type, nhấp vào AWS Service. Trong trường Use case, tìm và chọn SageMaker. Nhấp vào Next . Tại trang Add Permissions , nhấp vào Next . (chúng ta sẽ chỉnh sửa sau) Tại phần Name, review, and create (Đặt tên, xem lại và tạo), đặt tên cho role của bạn tại trường Role name và nhấp vào Submit . "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.1-createiam/2.1.2-createiamuser/",
+	"title": "Tạo IAM User",
+	"tags": [],
+	"description": "",
+	"content": "Tạo IAM User Lab IAM User Vào bảng điều khiển quản lý dịch vụ IAM Nhấp vào User. Nhấp vào Create User. Tại trang Specify user details. Trong trường User name, nhập tên người dùng cho người dùng mới. Nhấp vào Next. Tại trang Set permissions Trong trường Permissions options, chọn Attach policies directly Tìm và chọn AmazonSageMakerFullAccess, AmazonS3FullAccess, CloudWatchFullAccess Tại phần Review and create, nhấp vào Submit. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.2-createvpc/2.2.2-createroundtable/",
+	"title": "Tạo route table",
+	"tags": [],
+	"description": "",
+	"content": "Tạo route table Truy cập bảng điều khiển quản lý dịch vụ VPC Nhấp vào Route tables. Nhấp vào Create route table. Tại trang Create route table. Trong trường Name, gõ tên bạn muốn đặt cho bảng định tuyến của mình. Trong trường VPC, chọn VPC bạn vừa tạo. Nhấp vào Create route table. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.2-createvpc/2.2.3-createsubnet/",
+	"title": "Tạo subnet",
+	"tags": [],
+	"description": "",
+	"content": "Tạo subnet Truy cập bảng điều khiển quản lý dịch vụ VPC Nhấp vào Subnets. Nhấp vào Create subnet. Tại trang Create subnet.\nTrong trường VPC ID, chọn ID của VPC của bạn.\nTrong trường Subnet name, đặt tên cho subnet của bạn. Nên đặt tên là \u0026ldquo;tên_subnet_của_bạn-a\u0026rdquo; để phân biệt với 2 subnet khác là \u0026ldquo;tên_subnet_của_bạn-b\u0026rdquo; và \u0026ldquo;tên_subnet_của_bạn-c\u0026rdquo; mà bạn sẽ tạo sau này cho domain SageMaker.\nTrong trường Availability Zone, chọn khu vực cho subnet của bạn. Tôi chọn us-east-1a cho subnet này và chọn us-east-1b và us-east-1c cho 2 subnet khác trong dự án này. Nó có thể khác nhau tùy thuộc vào khu vực tài khoản của bạn.\nTrong trường IPv4 subnet CIDR block, đặt IPv4 cho subnet của bạn là 10.0.1.0/24. 10.0.2.0/24 và 10.0.3.0/24 sẽ được đặt cho 2 subnet khác.\nNhấp vào Add new subnet để tạo thêm 2 subnet nữa. Nhấp vào Create subnet sau khi bạn đã hoàn thành cả 3 subnet.\nĐể đặt nó thành public nhằm chạy mạng trên JupyterLab của bạn\nTại trang Subnets, nhấp vào subnet của bạn để đánh dấu chọn và nhấp vào Actions. Trong menu thả xuống Actions, nhấp vào Edit subnet settings. Tại Edit subnet settings, đánh dấu chọn Enable auto-assign public IPv4 address trong trường Auto-assign IP settings. Nhấp vào Save. Làm tương tự với cả 3 subnet. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/2.2-createvpc/2.2.1-createvpc/",
+	"title": "Tạo VPC",
+	"tags": [],
+	"description": "",
+	"content": "Tạo VPC Lab VPC Vào bảng điều khiển quản lý dịch vụ VPC Nhấp vào Your VPCs. Nhấp vào Create VPC. Tại trang Create VPC. Trong trường Name tag, viết tên cho VPC của bạn. Trong trường IPv4 CIDR, gõ 10.0.0.0/16. Cuộn xuống và nhấp vào Create VPC. "
+},
+{
+	"uri": "//localhost:1313/vi/2-prerequiste/",
+	"title": "Chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "Để học cách tạo người dùng và role IAM cũng như VPC với các subnet public/private, bạn có thể tham khảo các lab:\nGiới thiệu về Amazon IAM Làm việc với Amazon VPC Để sử dụng System Manager quản lý các instance Windows nói riêng và các instance nói chung trên AWS, chúng ta cần cấp quyền cho các instance đó để có thể làm việc với System Manager. Trong phần chuẩn bị này, chúng ta cũng sẽ tiến hành tạo một IAM Role để cấp quyền cho các instance có thể làm việc với System Manager.\nNội dung Chuẩn bị IAM user và role Chuẩn bị VPC "
+},
+{
+	"uri": "//localhost:1313/vi/3-sagemakerandjupyter/3.2-jupyter/",
+	"title": "Tạo kết nối đến máy chủ EC2 Private",
+	"tags": [],
+	"description": "",
+	"content": "Đối với Windows instance nằm trong private subnet, không có public IP, không có internet gateway nên không thể đi ra ngoài internet.\nVới loại instance này, cách làm truyền thống là ta sẽ sử dụng kỹ thuật Bastion host tốn nhiều chi phí và công sức, nhưng ở đây chúng ta sẽ sử dụng Session Manager với loại này.\nCơ bản là private instance vẫn phải mở cổng TCP 443 tới System Manager, nhưng không cho kết nối đó đi ra ngoài internet mà chỉ cho đi trong chính VPC của mình, nên đảm bảo được vấn đề bảo mật.\nĐể làm được điều đó, ta phải đưa endpoint của System Manager vào trong VPC, nghĩa là sử dụng VPC interface endpoint:\nVPC interface endpoint được gắn với subnet nên cách làm này không những với private subnet mà còn có thể làm với public subnet, nghĩa là với public subnet, bạn hoàn toàn có thể không cho TCP 443 đi ra ngoài internet.\nNội dung: Kích hoạt DNS hostnames Tạo VPC Endpoint Kết nối Private Instance "
+},
+{
+	"uri": "//localhost:1313/vi/3-sagemakerandjupyter/",
+	"title": "Tạo kết nối đến máy chủ EC2",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.\nNội dung 3.1. Tạo Kết nối đến máy chủ EC2 Public 3.2. Tạo Kết nối đến máy chủ EC2 Private\n"
+},
+{
+	"uri": "//localhost:1313/vi/4-demo/",
+	"title": "Demo chạy thử",
+	"tags": [],
+	"description": "",
+	"content": "Demo chạy thử Truy cập vào JupyterLab tại SageMaker Unified Studio Nhấn Python 3(ipykernel) notebook. Tại trang notebook của bạn Sao chép đoạn code sau và dán vào một ô trống from sklearn.datasets import load_iris\rfrom sklearn.model_selection import train_test_split\rfrom sklearn.ensemble import RandomForestClassifier\rimport joblib\rimport tarfile\r# 1. Train model\riris = load_iris()\rX_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, random_state=42)\rclf = RandomForestClassifier()\rclf.fit(X_train, y_train)\r# 2. Lưu model\rjoblib.dump(clf, \u0026#34;model.joblib\u0026#34;)\r# 3. Đóng gói thành tar.gz (đúng chuẩn SageMaker)\rwith tarfile.open(\u0026#34;iris-model.tar.gz\u0026#34;, \u0026#34;w:gz\u0026#34;) as tar:\rtar.add(\u0026#34;model.joblib\u0026#34;) Nhấn nút Run. Nếu xuất hiện 2 file iris-model.tar.gz và model.joblib nghĩa là đã chạy thành công. Ở một ô trống khác Sao chép đoạn code sau và dán vào đó import tarfile\rimport joblib\rimport numpy as np\r# Decompress the model file\rwith tarfile.open(\u0026#34;iris-model.tar.gz\u0026#34;, \u0026#34;r:gz\u0026#34;) as tar:\rtar.extractall(\u0026#34;.\u0026#34;)\r# Load the trained model\rmodel = joblib.load(\u0026#34;model.joblib\u0026#34;)\rrandom_matrix = np.random.rand(4, 4) * 5\rprint(\u0026#34;Generated 4x4 matrix:\u0026#34;)\rprint(random_matrix)\r# Attempt to use the matrix for prediction\rtry:\rpredictions = model.predict(random_matrix)\rprint(\u0026#34;\\nPredictions:\u0026#34;, predictions)\rexcept ValueError as e:\rprint(\u0026#34;\\nAn error occurred:\u0026#34;, e)\rprint(\u0026#34;\\nReason: Your model was trained on data with a different number of features (likely 4).\u0026#34;)\rprint(\u0026#34;The model\u0026#39;s input shape must match the number of features it was trained on.\u0026#34;)\rprint(\u0026#34;A 10x10 matrix is not a valid input shape for a model expecting 4 features per sample.\u0026#34;) + Nhấn nút **Run**.\rNếu xuất hiện kết quả tương tự như ma trận và dự đoán dưới đây, nghĩa là chạy thành công. "
+},
+{
+	"uri": "//localhost:1313/vi/5-clean/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Dọn dẹp tài nguyên Sau khi hoàn thành dự án, cần dọn dẹp các tài nguyên để tránh phát sinh chi phí.\n1. Xóa tài nguyên VPC Truy cập VPC Console trên AWS. Tìm và xóa các VPC đã tạo cho dự án (đảm bảo không còn tài nguyên nào đang gắn với VPC này). Trong từng VPC: Subnet → Xóa tất cả subnet tùy chỉnh. Route Tables → Xóa bảng định tuyến tùy chỉnh. 2. Xóa tài nguyên SageMaker AI Truy cập SageMaker Console. Vào Domain: Chọn Domain đã tạo → Delete. Vào User profiles: Xóa tất cả user trong domain. Vào Spaces: Xóa các space đã tạo cho dự án. 3. Xóa IAM Role và User Truy cập IAM Console. Roles: Tìm các role được tạo cho SageMaker, VPC trong dự án. Xóa các role này (chỉ khi không còn gắn với dịch vụ nào). Users: Xóa user được tạo riêng cho dự án. Nếu user nằm trong group → xóa quyền hoặc xóa user luôn. "
+},
+{
+	"uri": "//localhost:1313/vi/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/vi/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]

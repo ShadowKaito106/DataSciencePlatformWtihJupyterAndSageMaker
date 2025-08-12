@@ -1,0 +1,127 @@
+[
+{
+	"uri": "//localhost:1313/2-prerequiste/2.1-createiam/2.1.3-attachpolicytoiamrole/",
+	"title": "Attach Policy to IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Create IAM Lab IAM Go to IAM service management console + Click Role. + Find your role and click on it. At your role page. + In the Trust relationships field, click Edit trust policy. At the Edit trust policy page In the Access level - read or write, click SetSourceIdentity Click Update policy "
+},
+{
+	"uri": "//localhost:1313/3-sagemakerandjupyter/3.1-sagemaker/",
+	"title": "Connect to SageMaker",
+	"tags": [],
+	"description": "",
+	"content": "Create SageMaker Unified studio domain Go to SageMaker service management console + Click Create a Unified studio domain. At Create an Amazon SageMaker Unified Studio domain page. + In the How do you want to set up your domain? field, choose Quick setup. Click Choose VPC. After Click Choose VPC In the Virtual private cloud (VPC) field, choose your VPC. In the Subnets, choose all 3 subnets you create. Click Create domain.\nGo to SageMaker AI service management console\nClick Domains. At Domains page\nClick on your SageMaker domain. If you have more than 1 domain on Domains page, you can look at it\u0026rsquo;s created time to know which one is SageMaker domain.\nAt your SageMaker domain page In the Authentication and permissions, click Edit. + In the Permissions, find and choose your IAM role at both Default execution role and Space default execution role field. Make sure that you choose the IAM role that you create before that have SetSourceIdentity if don\u0026rsquo;t SageMaker will unable to create space for Jupyter notebook\n+ Click Submit 8. At your SageMaker domain page + In the Network, click Edit.\n+ In the How do you want to connect to other AWS services?, choose Public internet access and click Submit\n"
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.1-createiam/2.1.1-createiamrole/",
+	"title": "Create IAM Role",
+	"tags": [],
+	"description": "",
+	"content": "Create IAM Lab IAM Go to IAM service management console + Click Role. + Click Create Role. At the Create Role page. + In the Trusted entity type field, click AWS Service. + In the Use case field, find and choose SageMaker. + Click Next. At the Add Permissions page, click Next. (we will modify it later) At the Name, review, and create, name your role at Role name fleld and click Submit. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.1-createiam/2.1.2-createiamuser/",
+	"title": "Create IAM User",
+	"tags": [],
+	"description": "",
+	"content": "Create IAM Lab IAM Go to IAM service management console Click User. Click Create User. At the Specify user details page. In the User name field, type a user name for new user. Click Next. At the Set permissions page In the Permissions options field, choose Attach policies directly Find and choose AmazonSageMakerFullAccess, AmazonS3FullAccess, CloudWatchFullAccess At the Review and create, click Submit. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.2-createvpc/2.2.2-createroundtable/",
+	"title": "Create route table",
+	"tags": [],
+	"description": "",
+	"content": "Create route table Go to VPC service management console + Click Route tables. + Click on Create route table. At Create route table page. + In the Name field, type a name your want for your route table. In the VPC field, choose the VPC you just created. Click Create route table. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.2-createvpc/2.2.3-createsubnet/",
+	"title": "Create subnet",
+	"tags": [],
+	"description": "",
+	"content": "Create subnet Go to VPC service management console Click Subnets. Click Create subnet. At the Create subnet page.\nIn the VPC ID field, choose the id of your VPC.\nIn the Subnet name field, name your subnet. Recommend name it with \u0026ldquo;yoursubnetname-a\u0026rdquo; to seperate with 2 more subnet \u0026ldquo;yoursubnetname-b\u0026rdquo; and \u0026ldquo;yoursubnetname-c\u0026rdquo; you will create later for SageMaker domain.\nIn the Availability Zone field, choose the zone for your subnet. I choose us-east-1a for this subnet and choose us-east-1b and us-east-1c for 2 others subnet in this project.It maybe different depend on your account region.\nIn the IPv4 subnet CIDR block field, set your subnet IPv4 to 10.0.1.0/24. 10.0.2.0/24 and 10.0.3.0/24 will be set into 2 others subnet.\nClick Add new subnet to create 2 more subnet. Click Create subnet after you done all 3 subnets.\nTo set it to public in order to run network on your JupyterLab\nAt the Subnets page, click your subnet to tick it and click Actions. In the Actions dropdown, click Edit subnet settings. At the Edit subnet settings, tick on the Enable auto-assign public IPv4 address in the Auto-assign IP settings field. Click Save Do the same with all 3 subnets. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.2-createvpc/2.2.1-createvpc/",
+	"title": "Create VPC",
+	"tags": [],
+	"description": "",
+	"content": "Create VPCLab VPC Go to VPC service management console + Click Your VPCs. + Click Create VPC. At the Create VPC page. + In the Name tag field, write a name for your VPC. + In the IPv4 CIDR field, type 10.0.0.0/16. Scroll dơwn and click Create VPC. "
+},
+{
+	"uri": "//localhost:1313/1-introduce/",
+	"title": "Introduction",
+	"tags": [],
+	"description": "",
+	"content": "Data Science Platform with Jupyter and SageMaker is a comprehensive solution on the AWS platform that helps build a modern data science development environment. It supports every step from data preparation and model development to team collaboration, deployment, and monitoring of machine learning models. The system is designed to meet requirements for security, user management, cost optimization, and to provide an effective working experience for data scientists.\nWith this platform, you will gain superior benefits compared to traditional methods:\nIt provides a pre-integrated JupyterLab environment on AWS, which is easily accessible from a browser without local installation. You can safely manage and share project resources among team members. It supports popular programming languages like Python, R, and Julia. It integrates tightly with AWS services such as S3, SageMaker, CloudWatch, and IAM. It automates the process of model training and deployment with SageMaker. It manages data and model versions, making it easy to reproduce and improve results. It monitors model performance and service usage costs. With these advantages, the Data Science Platform with Jupyter and SageMaker will help save time, reduce costs, and increase work efficiency in the field of data science.\n"
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.1-createiam/",
+	"title": "Preparing IAM Role and User",
+	"tags": [],
+	"description": "",
+	"content": "In this step, we will create an IAM role to grant permissions to EC2 Instances and an IAM user to manage resources.\nThe overall architecture after completing this step will be as follows:\nTo learn how to create an IAM role and user, you can refer to the lab:\nWorks with IAM User and Role Content Create IAM Role Create IAM User Attach Policy to IAM Role "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/2.2-createvpc/",
+	"title": "Preparing IAM Role and User",
+	"tags": [],
+	"description": "",
+	"content": "In this step, we will create an IAM role to grant permissions to EC2 Instances and an IAM user to manage resources.\nThe overall architecture after completing this step will be as follows:\nTo learn how to create an IAM role and user, you can refer to the lab:\nWorks with IAM User and Role Content Create VPC Create Subnet Create Route Table "
+},
+{
+	"uri": "//localhost:1313/",
+	"title": "QSession Management",
+	"tags": [],
+	"description": "",
+	"content": "Data Science Platform with Jupyter and SageMaker Overview In this lab, you will learn the basics and practice of ata Science Platform with Jupyter and SageMaker.\nYou will perform creating and using SageMaker and Jupyter for data science project.\nContent Introduction Preparation Connect to SageMaker and JupyterLab Manage session logs Clean up resources "
+},
+{
+	"uri": "//localhost:1313/3-sagemakerandjupyter/3.2-jupyter/",
+	"title": "Connect to Jupyter",
+	"tags": [],
+	"description": "",
+	"content": "Connect to JupyterLab Go to SageMaker service management console + Click View existing domains. At Domains page Click Open unified studio in your just created domain. Click Sign in with AWS IAM. At SageMaker Unified studio page In the select a project button, choose the auto-generated project. In the Subnets, choose all 3 subnets you create. At your project page Click Build Choose JupyterLab to open JupyterLab notebook. "
+},
+{
+	"uri": "//localhost:1313/2-prerequiste/",
+	"title": "Preparation",
+	"tags": [],
+	"description": "",
+	"content": "To learn how to create IAM users and roles, and VPCs with public/private subnets, you can refer to the labs:\nAbout Amazon IAM Works with Amazon VPC To use Systems Manager to manage our Windows instances in particular and our instances in general on AWS, we need to grant permissions to our instances to be able to work with Systems Manager. In this preparation, we will also proceed to create an IAM Role to grant these permissions.\nContent Prepare IAM user and role Prepare VPC "
+},
+{
+	"uri": "//localhost:1313/3-sagemakerandjupyter/",
+	"title": "Connect SageMaker and Jupyter",
+	"tags": [],
+	"description": "",
+	"content": "In this step, we will connect to SageMaker unifed studio and use JupyterLab that studio provided.\nContent 3.1. Connect SageMaker 3.2. Connect JupyterLab\n"
+},
+{
+	"uri": "//localhost:1313/4-demo/",
+	"title": "Demo running",
+	"tags": [],
+	"description": "",
+	"content": "Demo running Go to JupyterLab at SageMaker Unified studio + Click Python 3(ipykernel) notebook. At your notebook page Copy this code and paste into an empty cell from sklearn.datasets import load_iris\rfrom sklearn.model_selection import train_test_split\rfrom sklearn.ensemble import RandomForestClassifier\rimport joblib\rimport tarfile\r# 1. Train model\riris = load_iris()\rX_train, X_test, y_train, y_test = train_test_split(iris.data, iris.target, random_state=42)\rclf = RandomForestClassifier()\rclf.fit(X_train, y_train)\r# 2. Lưu model\rjoblib.dump(clf, \u0026#34;model.joblib\u0026#34;)\r# 3. Đóng gói thành tar.gz (đúng chuẩn SageMaker)\rwith tarfile.open(\u0026#34;iris-model.tar.gz\u0026#34;, \u0026#34;w:gz\u0026#34;) as tar:\rtar.add(\u0026#34;model.joblib\u0026#34;) Click Run button. If it appear 2 file iris-model.tar.gz and model.joblib that means it run correctly. In the another empty cell Copy this code and paste it import tarfile\rimport joblib\rimport numpy as np\r# Decompress the model file\rwith tarfile.open(\u0026#34;iris-model.tar.gz\u0026#34;, \u0026#34;r:gz\u0026#34;) as tar:\rtar.extractall(\u0026#34;.\u0026#34;)\r# Load the trained model\rmodel = joblib.load(\u0026#34;model.joblib\u0026#34;)\rrandom_matrix = np.random.rand(4, 4) * 5\rprint(\u0026#34;Generated 4x4 matrix:\u0026#34;)\rprint(random_matrix)\r# Attempt to use the matrix for prediction\rtry:\rpredictions = model.predict(random_matrix)\rprint(\u0026#34;\\nPredictions:\u0026#34;, predictions)\rexcept ValueError as e:\rprint(\u0026#34;\\nAn error occurred:\u0026#34;, e)\rprint(\u0026#34;\\nReason: Your model was trained on data with a different number of features (likely 4).\u0026#34;)\rprint(\u0026#34;The model\u0026#39;s input shape must match the number of features it was trained on.\u0026#34;)\rprint(\u0026#34;A 10x10 matrix is not a valid input shape for a model expecting 4 features per sample.\u0026#34;) Click on Run button If it show something similar to the matrix and prediction below that means it run correctly. "
+},
+{
+	"uri": "//localhost:1313/5-clean/",
+	"title": "Resource Cleanup",
+	"tags": [],
+	"description": "",
+	"content": "Resource Cleanup After completing the project, you should clean up unused resources to avoid unnecessary costs.\n1. Delete VPC Resources Go to the VPC Console in AWS. Locate and delete the VPCs created for the project (ensure no active resources are attached to them). Inside each VPC: Subnet → Delete all custom subnets. Route Tables → Delete all custom route tables. 2. Delete SageMaker AI Resources Go to the SageMaker Console. Open Domain: Select the created domain → Delete. Open User profiles: Delete all users within the domain. Open Spaces: Delete all spaces created for the project. 3. Delete IAM Roles and Users Go to the IAM Console. Roles: Find the roles created for SageMaker, S3, or VPC in the project. Delete these roles (only if they are not attached to any service). Users: Delete the users created specifically for the project. If the user belongs to a group → remove permissions or delete the user. "
+},
+{
+	"uri": "//localhost:1313/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "//localhost:1313/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
