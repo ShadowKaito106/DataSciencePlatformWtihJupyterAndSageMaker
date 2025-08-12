@@ -12,11 +12,11 @@ pre : " <b> 2.2.2 </b> "
    + Nhấp vào **Route tables**.
    + Nhấp vào **Create route table**.
 
-![IAM](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/010-VPC.png)
+![IAM](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/010-VPC.png)
 
 2. Tại trang **Create route table**.
    + Trong trường **Name**, gõ tên bạn muốn đặt cho bảng định tuyến của mình.
    + Trong trường **VPC**, chọn VPC bạn vừa tạo.
    + Nhấp vào **Create route table**.
 
-![VPC](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/011-VPC.png)
+![VPC](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/011-VPC.png)

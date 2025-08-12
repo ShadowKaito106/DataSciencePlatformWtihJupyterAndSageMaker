@@ -11,7 +11,7 @@ pre : " <b> 4. </b> "
 1. Go to **JupyterLab** at SageMaker Unified studio
     + Click **Python 3(ipykernel) notebook**.
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/001-Demo.png)
+![DM](/images/4.demo/001-Demo.png)
 
 2. At your notebook page
    + Copy this code and paste into an empty cell
@@ -40,7 +40,7 @@ with tarfile.open("iris-model.tar.gz", "w:gz") as tar:
    + Click **Run** button.
    + If it appear 2 file **iris-model.tar.gz** and **model.joblib** that means it run correctly.
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/002-Demo.png)
+![DM](/images/4.demo/002-Demo.png)
 
 3. In the another empty cell
    + Copy this code and paste it
@@ -75,8 +75,8 @@ except ValueError as e:
 ```
    + Click on **Run** button
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/003-Demo.png)
+![DM](/DataSciencePlatformWtihJupyterAndSageMaker/images/4.demo/003-Demo.png)
 
 4. If it show something similar to the matrix and prediction below that means it run correctly.
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/004-Demo.png)
+![DM](/DataSciencePlatformWtihJupyterAndSageMaker/images/4.demo/004-Demo.png)

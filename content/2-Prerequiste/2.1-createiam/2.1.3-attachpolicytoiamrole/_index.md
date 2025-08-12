@@ -12,15 +12,15 @@ pre : " <b> 2.1.3 </b> "
    + Click **Role**.
    + Find your role and click on it.
 
-![IAM](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/005-IAM.png)
+![IAM](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/005-IAM.png)
 
 2. At your role page.
    + In the **Trust relationships** field, click **Edit trust policy**.
 
-![IAM](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/006-IAM.png)
+![IAM](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/006-IAM.png)
 
 3. At the **Edit trust policy** page
     + In the **Access level - read or write**, click **SetSourceIdentity**
     + Click **Update policy**
 
-![IAM](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/007-IAM.png)
+![IAM](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/007-IAM.png)

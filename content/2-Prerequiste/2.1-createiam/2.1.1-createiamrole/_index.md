@@ -12,14 +12,14 @@ pre : " <b> 2.1.1 </b> "
    + Click **Role**.
    + Click **Create Role**.
 
-![IAM](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/001-IAM.png)
+![IAM](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/001-IAM.png)
 
 2. At the **Create Role** page.
    + In the **Trusted entity type** field, click **AWS Service**.
    + In the **Use case** field, find and choose **SageMaker**.
    + Click **Next**.
 
-![IAM](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/002-IAM.png)
+![IAM](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/002-IAM.png)
 
 3. At the **Add Permissions** page, click **Next**. (we will modify it later)
 4. At the **Name, review, and create**, name your role at **Role name** fleld and click **Submit**.

@@ -1,13 +1,13 @@
 ---
-title : "Tạo kết nối đến máy chủ EC2"
-date: "2025-08-12" 
-weight : 3 
+title : "Kết nối SageMaker và Jupyter"
+date: "2025-08-12"
+weight : 3
 chapter : false
 pre : " <b> 3. </b> "
 ---
 
-Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.
+Trong bước này, chúng ta sẽ kết nối với SageMaker unified studio và sử dụng JupyterLab mà studio đã cung cấp.
 
-### Nội dung
-3.1. [Tạo Kết nối đến máy chủ EC2 Public](3.1-public-instance/) \
-3.2. [Tạo Kết nối đến máy chủ EC2 Private](3.2-private-instance/) 
+### Nội dung
+3.1. [Kết nối SageMaker](3.1-sagemaker/) 
+3.2. [Kết nối JupyterLab](3.2-Jupyter/)

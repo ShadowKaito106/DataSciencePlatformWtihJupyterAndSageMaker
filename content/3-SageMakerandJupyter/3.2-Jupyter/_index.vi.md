@@ -1,20 +1,31 @@
 ---
-title : "Tạo kết nối đến máy chủ EC2 Private"
-date: "2025-08-12" 
-weight : 2 
+title : "Kết nối tới Jupyter"
+date: "2025-08-12"
+weight : 2
 chapter : false
 pre : " <b> 3.2. </b> "
 ---
-Đối với **Windows instance** nằm trong **private subnet**, không có **public IP**, không có **internet gateway** nên không thể đi ra ngoài **internet.**\
-Với loại instance này, cách làm truyền thống là ta sẽ sử dụng kỹ thuật Bastion host tốn nhiều chi phí và công sức, nhưng ở đây chúng ta sẽ sử dụng Session Manager với loại này.\
-Cơ bản là **private instance** vẫn phải mở cổng **TCP 443** tới **System Manager**, nhưng không cho kết nối đó đi ra ngoài internet mà chỉ cho đi trong chính VPC của mình, nên đảm bảo được vấn đề bảo mật.\
-Để làm được điều đó, ta phải đưa endpoint của System Manager vào trong VPC, nghĩa là sử dụng **VPC interface endpoint:** 
 
-![ConnectPrivate](/images/arc-03.png) 
+#### Kết nối tới JupyterLab
+1.  Truy cập **bảng điều khiển quản lý dịch vụ SageMaker** tại [https://console.aws.amazon.com/sagemaker/home](https://console.aws.amazon.com/sagemaker/home).
+    * Nhấp vào **View existing domains**.
 
-**VPC interface endpoint** được gắn với subnet nên cách làm này không những với **private subnet** mà còn có thể làm với **public subnet**, nghĩa là với **public subnet**, bạn hoàn toàn có thể không cho **TCP 443** đi ra ngoài internet.
+![SM](/DataSciencePlatformWtihJupyterAndSageMaker/images/3.connect/004-SageMaker.png)
 
-### Nội dung:
-   - [Kích hoạt DNS hostnames](./3.2.1-enablevpcdns/)
-   - [Tạo VPC Endpoint](./3.2.2-createvpcendpoint/)
-   - [Kết nối Private Instance](./3.3.3-connectec2/)
+2.  Tại trang **Domains**:
+    * Nhấp vào **Open unified studio** trong domain bạn vừa tạo.
+    * Nhấp vào **Sign in with AWS IAM**.
+
+![SM](/DataSciencePlatformWtihJupyterAndSageMaker/images/3.connect/005-SageMaker.png)
+
+3.  Tại trang **SageMaker Unified studio**:
+    * Trong mục **select a project**, chọn dự án được tạo tự động.
+    * Trong mục **Subnets**, chọn cả 3 subnets bạn đã tạo.
+
+![SM](/DataSciencePlatformWtihJupyterAndSageMaker/images/3.connect/006-SageMaker.png)
+
+4.  Tại trang dự án của bạn:
+    * Nhấp vào **Build**.
+    * Chọn **JupyterLab** để mở notebook.
+
+![SM](/DataSciencePlatformWtihJupyterAndSageMaker/images/3.connect/007-SageMaker.png)

@@ -12,12 +12,12 @@ pre : " <b> 2.2.1 </b> "
    + Nhấp vào **Your VPCs**.
    + Nhấp vào **Create VPC**.
 
-![VPC](datascienceplatformwtihjupyterandsagemaker/imagesr/2.prerequisite/008-VPC.png)
+![VPC](/DataSciencePlatformWtihJupyterAndSageMaker/imagesr/2.prerequisite/008-VPC.png)
 
 2. Tại trang **Create VPC**.
    + Trong trường **Name tag**, viết tên cho **VPC** của bạn.
    + Trong trường **IPv4 CIDR**, gõ **10.0.0.0/16**.
 
-![VPC](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/009-VPC.png)
+![VPC](/DataSciencePlatformWtihJupyterAndSageMaker/images/2.prerequisite/009-VPC.png)
 
 3. Cuộn xuống và nhấp vào **Create VPC**.

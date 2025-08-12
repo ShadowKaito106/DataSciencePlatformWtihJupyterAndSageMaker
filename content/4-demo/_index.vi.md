@@ -10,7 +10,7 @@ pre : " <b> 4. </b> "
 1. Truy cập vào **JupyterLab** tại SageMaker Unified Studio  
     + Nhấn **Python 3(ipykernel) notebook**.
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/001-Demo.png)
+![DM](/images/4.demo/001-Demo.png)
 
 2. Tại trang notebook của bạn  
    + Sao chép đoạn code sau và dán vào một ô trống
@@ -40,7 +40,7 @@ with tarfile.open("iris-model.tar.gz", "w:gz") as tar:
    + Nhấn nút **Run**.  
    + Nếu xuất hiện 2 file **iris-model.tar.gz** và **model.joblib** nghĩa là đã chạy thành công.
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/002-Demo.png)
+![DM](/images/4.demo/002-Demo.png)
 
 3. Ở một ô trống khác  
    + Sao chép đoạn code sau và dán vào đó
@@ -76,8 +76,8 @@ except ValueError as e:
 ```
     + Nhấn nút **Run**.
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/003-Demo.png)
+![DM](/images/4.demo/003-Demo.png)
 
 4. Nếu xuất hiện kết quả tương tự như ma trận và dự đoán dưới đây, nghĩa là chạy thành công.
 
-![DM](datascienceplatformwtihjupyterandsagemaker/images/4.demo/004-Demo.png)
+![DM](/images/4.demo/004-Demo.png)

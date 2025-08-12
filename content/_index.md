@@ -11,8 +11,8 @@ In this lab, you will learn the basics and practice of ata Science Platform with
 You will perform creating and using SageMaker and Jupyter for data science project.
 
 ### Content
- 1. [Introduction](1-introduce/)
- 2. [Preparation](2-prerequiste/)
- 3. [Connect to SageMaker and JupyterLab](33-SageMakerandJupyter/)
- 4. [Manage session logs](4-demo/)
- 5. [Clean up resources](5-clean/)
+ 1. [Introduction](1-Introduce)
+ 2. [Preparation](2-Prerequiste)
+ 3. [Connect to SageMaker and JupyterLab](33-SageMakerandJupyter)
+ 4. [Manage session logs](4-demo)
+ 5. [Clean up resources](5-clean)
