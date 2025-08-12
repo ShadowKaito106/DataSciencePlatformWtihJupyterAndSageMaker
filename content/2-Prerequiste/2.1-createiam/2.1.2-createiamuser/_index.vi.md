@@ -12,13 +12,13 @@ pre : " <b> 2.1.2 </b> "
    + Nhấp vào **User**.
    + Nhấp vào **Create User**.
 
-![VPC](/images/2.prerequisite/003-IAM.png)
+![VPC](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/003-IAM.png)
 
 2. Tại trang **Specify user details**.
    + Trong trường **User name**, nhập tên người dùng cho người dùng mới.
    + Nhấp vào **Next**.
 
-![VPC](/images/2.prerequisite/004-IAM.png)
+![VPC](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/004-IAM.png)
 
 3. Tại trang **Set permissions** 
    + Trong trường **Permissions options**, chọn **Attach policies directly**

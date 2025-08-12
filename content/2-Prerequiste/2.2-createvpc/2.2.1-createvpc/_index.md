@@ -12,12 +12,12 @@ pre : " <b> 2.2.1 </b> "
    + Click **Your VPCs**.
    + Click **Create VPC**.
 
-![VPC](/images/2.prerequisite/008-VPC.png)
+![VPC](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/008-VPC.png)
 
 2. At the **Create VPC** page.
    + In the **Name tag** field, write a name for your **VPC**.
    + In the **IPv4 CIDR** field, type **10.0.0.0/16**.
 
-![VPC](/images/2.prerequisite/009-VPC.png)
+![VPC](datascienceplatformwtihjupyterandsagemaker/images/2.prerequisite/009-VPC.png)
 
 3. Scroll dơwn and click **Create VPC**.
